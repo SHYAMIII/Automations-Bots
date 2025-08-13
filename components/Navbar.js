@@ -28,9 +28,9 @@ export default function Navbar(){
   return (
     <header className='fixed w-full z-40 bg-white'>
       <div className='max-w-6xl mx-auto px-6 pt-3 flex items-center justify-between'>
-        <Link href='/' className='flex items-center gap-3'>
+        <Link href='/' className='flex items-center gap-3 '>
           <img src='/logo.svg' alt='logo' className='w-10 h-10' />
-          <span className='text-gray-800 font-semibold tracking-wide'>AutomationBots </span>
+          <span className='text-gray-800 text-2xl font-bold tracking-wide'>AUTOMATIONBOTS </span>
         </Link>
         
         {/* Desktop Navigation */}

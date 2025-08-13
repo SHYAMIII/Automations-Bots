@@ -12,7 +12,7 @@ export default function Chatbot() {
 
   // Clear backend history on page load
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/chat", {
+    fetch("https://shyamiii-chatbotapv2.hf.space/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ "message": "", "reset": true }) // empty message to trigger clear
@@ -34,7 +34,7 @@ export default function Chatbot() {
     setInput('');
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/chat", {
+      const res = await fetch("https://shyamiii-chatbotapv2.hf.space/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
