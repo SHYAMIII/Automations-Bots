@@ -30,7 +30,7 @@ export default function Navbar(){
       <div className='max-w-6xl mx-auto px-6 pt-3 flex items-center justify-between'>
         <Link href='/' className='flex items-center gap-3 '>
           <img src='/logo.svg' alt='logo' className='w-10 h-10' />
-          <span className='text-gray-800 text-2xl font-bold tracking-wide'>AUTOMATIONBOTS </span>
+          <span className='text-gray-800 font-bold tracking-wide'>AUTOMATIONBOTS </span>
         </Link>
         
         {/* Desktop Navigation */}
