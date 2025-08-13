@@ -1,0 +1,22 @@
+/* Load Orbitron as fallback; Nasalization local files will override if provided */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+/* Load premium fonts for better body text readability */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600;700&display=swap');
+
+@font-face { font-family: 'Nasalization'; src: url('/fonts/nasalization-regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Nasalization'; src: url('/fonts/nasalization-700.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+
+@tailwind base; @tailwind components; @tailwind utilities;
+
+:root{ --bg:#0b1220; --muted:#9ba7b2; --accent:#00B4D8; }
+html,body,#__next{height:100%}
+body{@apply bg-white text-gray-900; font-family: Nasalization, Orbitron, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+
+.hero-shell{ background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.02)); color: #1f2937; }
+.card-glow{ background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)); backdrop-filter: blur(6px); border:1px solid rgba(255,255,255,0.04); }
+
+/* Font classes for different text types */
+.font-heading { font-family: Nasalization, Orbitron, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+.font-body { font-family: 'Plus Jakarta Sans', 'Inter', 'Albert Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }

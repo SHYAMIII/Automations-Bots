@@ -1,0 +1,1 @@
+module.exports = { content: ['./app/**/*.{js,jsx}', './components/**/*.{js,jsx}'], theme: { extend: { colors: { primary: '#0b1220', accent: '#00B4D8' }, fontFamily: { display: ['Nasalization','Orbitron','ui-sans-serif','system-ui'] } } }, plugins: [require('@tailwindcss/typography')] }
