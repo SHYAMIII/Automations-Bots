@@ -54,7 +54,7 @@ export default function Hero(){
               <span style={{color:'var(--accent)'}} className='relative'>
                 revenue
                 <motion.div
-                  className='absolute -bottom-2 left-0 w-full h-[0.2rem] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full'
+                  className='absolute -bottom-[0.2rem] left-0 w-full h-[0.4rem] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full'
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{ duration: 0.8, delay: 0.5 }}
