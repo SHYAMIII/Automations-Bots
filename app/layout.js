@@ -3,7 +3,11 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Chatbot from '../components/Chatbot'
 
-export const metadata = { title: 'AutomationBots  - AI-Powered Sales Development Representatives', description: 'Transform your sales with intelligent AI agents that make calls, qualify leads, and schedule meetings 24/7' }
+export const metadata = { title: 'AutomationBots  - AI-Powered Sales Development Representatives',
+                         description: 'Transform your sales with intelligent AI agents that make calls, qualify leads, and schedule meetings 24/7',
+                         icons: {
+    icon: '/favicon.png'
+  },}
 
 export default function RootLayout({ children }) {
   return (
