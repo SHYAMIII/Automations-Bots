@@ -29,8 +29,8 @@ export default function Navbar(){
     <header className='fixed w-full z-40 bg-white'>
       <div className='max-w-6xl mx-auto px-6 pt-3 flex items-center justify-between'>
         <Link href='/' className='flex items-center gap-3 '>
-          <img src='/logo.svg' alt='logo' className='w-10 h-10' />
-          <span className='text-gray-800 font-bold tracking-wide'>AUTOMATIONBOTS </span>
+          <img src='/logo2.png' alt='logo2' className='w-14 h-14' />
+          <span className='text-gray-800 font-bold tracking-wide'>AUTOMATION BOTS </span>
         </Link>
         
         {/* Desktop Navigation */}
@@ -62,7 +62,7 @@ export default function Navbar(){
           {/* Mobile Menu Header */}
           <div className='flex items-center justify-between p-6 '>
             <Link href='/' className='flex items-center gap-3' onClick={() => setIsMobileMenuOpen(false)}>
-              <img src='/logo.svg' alt='logo' className='w-8 h-8' />
+              <img src='/logo2.png' alt='logo' className='w-14 h-14' />
               <span className='text-gray-800 font-semibold text-sm'>AutomationBots</span>
             </Link>
             <button
