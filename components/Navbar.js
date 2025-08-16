@@ -34,7 +34,7 @@ export default function Navbar(){
         </Link>
         
         {/* Desktop Navigation */}
-        <nav className='hidden md:flex gap-6 items-center text-sm text-gray-700'>
+        <nav className='hidden md:flex gap-6 font-bold items-center text-sm text-gray-700'>
           <Link href={isHomePage ? '#features' : '/#features'} className='hover:text-gray-900 transition-colors duration-200'>Services</Link>
           <Link href={isHomePage ? '#approach' : '/#approach'} className='hover:text-gray-900 transition-colors duration-200'>Approach</Link>
           <Link href='/demos' className='hover:text-gray-900 transition-colors duration-200'>Demos</Link>
@@ -80,21 +80,21 @@ export default function Navbar(){
           <nav className='flex-1 px-6 py-8 space-y-6'>
             <Link 
               href={isHomePage ? '#features' : '/#features'} 
-              className='block text-lg font-medium text-gray-800 hover:text-blue-600 transition-colors duration-200 py-3 border-b border-gray-100'
+              className='block text-lg font-bold text-gray-800 hover:text-blue-600 transition-colors duration-200 py-3 border-b border-gray-100'
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Services
             </Link>
             <Link 
               href={isHomePage ? '#approach' : '/#approach'} 
-              className='block text-lg font-medium text-gray-800 hover:text-blue-600 transition-colors duration-200 py-3 border-b border-gray-100'
+              className='block text-lg font-bold text-gray-800 hover:text-blue-600 transition-colors duration-200 py-3 border-b border-gray-100'
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Approach
             </Link>
             <Link 
               href='/demos' 
-              className='block text-lg font-medium text-gray-800 hover:text-blue-600 transition-colors duration-200 py-3 border-b border-gray-100'
+              className='block text-lg font-bold text-gray-800 hover:text-blue-600 transition-colors duration-200 py-3 border-b border-gray-100'
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Demos
