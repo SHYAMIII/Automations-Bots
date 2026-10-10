@@ -1,22 +1,28 @@
-/* Load Orbitron as fallback; Nasalization local files will override if provided */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-/* Load premium fonts for better body text readability */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@font-face { font-family: 'Nasalization'; src: url('/fonts/nasalization-regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Nasalization'; src: url('/fonts/nasalization-700.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+:root { color-scheme: dark; }
 
-@tailwind base; @tailwind components; @tailwind utilities;
+html { scroll-padding-top: 5rem; }
+body { @apply bg-bg font-sans text-ink antialiased; }
 
-:root{ --bg:#0b1220; --muted:#9ba7b2; --accent:#00B4D8; }
-html,body,#__next{height:100%}
-body{@apply bg-white text-gray-900; font-family: Nasalization, Orbitron, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
 
-.hero-shell{ background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.02)); color: #1f2937; }
-.card-glow{ background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)); backdrop-filter: blur(6px); border:1px solid rgba(255,255,255,0.04); }
+::selection { background: #C5F04A; color: #0B0B0C; }
 
-/* Font classes for different text types */
-.font-heading { font-family: Nasalization, Orbitron, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
-.font-body { font-family: 'Plus Jakarta Sans', 'Inter', 'Albert Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+:focus-visible { outline: 2px solid #C5F04A; outline-offset: 2px; }
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-medium transition-colors;
+  }
+  .btn-primary { @apply btn bg-lime text-bg hover:bg-lime-hover; }
+  .btn-secondary { @apply btn border border-line text-ink hover:bg-raised; }
+  .eyebrow { @apply font-mono text-xs uppercase tracking-wider text-muted; }
+  .field {
+    @apply w-full rounded-md border border-line bg-bg px-3 py-2.5 text-sm text-ink placeholder:text-muted/70 focus:border-lime focus:outline-none;
+  }
+}

@@ -1,15 +1,28 @@
-# Rekki-inspired Home (Next.js App Router)
+# Auto Botz website
 
-This is a focused, pixel-polished home page inspired by rekki.com.
-It uses Next.js App Router, TailwindCSS, and Framer Motion.
+Marketing site for AB Sales, at https://autobotz.site. Next.js 14 (App Router) and Tailwind CSS.
 
-Font handling:
-- If you have the Nasalization font files, place them in `/public/fonts/` as:
-  - nasalization-regular.woff2
-  - nasalization-700.woff2
-- The site will load Nasalization if present; otherwise it loads Orbitron from Google Fonts as a close free alternative.
+## Run it
 
-Quick start:
-1. npm install
-2. npm run dev
-3. Open http://localhost:3000
+```
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # production build
+```
+
+## Environment variables
+
+| Name | Needed | What it does |
+|---|---|---|
+| `NEXT_PUBLIC_APP_URL` | Before launch | URL of the AB Sales app, e.g. `https://app.autobotz.site`. Sign-in and plan links stay hidden until it is set. |
+| `CONTACT_WEBHOOK_URL` | Optional | Google Apps Script that saves contact form messages to the sheet. Defaults to the current script. |
+
+## Where things live
+
+- `lib/site.js`: company name, email, domain, credit prices. Change facts here, not in page text.
+- `app/privacy` and `app/terms`: mirror the legal pages in the AB Sales app (`AB-sales/src/pages/legal`). Change both together and bump `legalUpdated` in `lib/site.js`.
+- `components/InboxPreview.js`: a drawing of the app's Inbox. Replace it with a real screenshot when you have one.
+
+## Writing rules for this site
+
+No purple gradients, pill-shaped buttons, emoji icons, em dashes, scroll or cursor animations, stock or AI-generated photos, made-up reviews, metrics, logos or customer counts. Every product claim must match what AB Sales actually does.
