@@ -1,7 +1,8 @@
 import { Inbox, Send } from './Icons'
+import { SITE } from '../lib/site'
 
 /**
- * Drawing of the AB Sales Inbox review screen (../AB-sales/src/pages/Inbox.tsx),
+ * Drawing of the Hayo Inbox review screen (../AB-sales/src/pages/Inbox.tsx),
  * using its real labels. The message is an example, and the caption says so.
  * Swap for a real screenshot once one is available.
  */
@@ -55,7 +56,7 @@ export default function InboxPreview() {
         </div>
       </div>
       <figcaption className='mt-3 text-xs leading-relaxed text-muted'>
-        The AB Sales inbox, shown with an example message. Replies wait here as drafts until someone on your team approves them.
+        The {SITE.product} inbox, shown with an example message. Replies wait here as drafts until someone on your team approves them.
       </figcaption>
     </figure>
   )

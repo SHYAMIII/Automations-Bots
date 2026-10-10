@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 import { SITE } from '../lib/site'
 
 const description =
-  'AB Sales runs AI call and email campaigns on your lead lists, answers inbound calls, and drafts replies to incoming mail for your team to review.'
+  `${SITE.product} runs AI call and email campaigns on your lead lists, answers inbound calls, and drafts replies to incoming mail for your team to review.`
 
 export const metadata = {
   metadataBase: new URL(SITE.url),

@@ -1,4 +1,4 @@
-/** Colours match the AB Sales app's dark theme (../AB-sales/src/index.css). */
+/** Colours match the Hayo app's dark theme (../AB-sales/src/index.css). */
 module.exports = {
   content: ['./app/**/*.{js,jsx}', './components/**/*.{js,jsx}'],
   theme: {

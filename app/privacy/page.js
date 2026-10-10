@@ -9,7 +9,7 @@ export const metadata = {
 }
 
 /**
- * Service providers that receive personal data through AB Sales. Mirrors
+ * Service providers that receive personal data through Hayo. Mirrors
  * PROVIDERS in ../AB-sales/src/pages/legal/PrivacyPolicy.tsx (2026-10-10).
  */
 const PROVIDERS = [

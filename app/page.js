@@ -17,7 +17,7 @@ const capabilities = [
   {
     icon: PhoneIn,
     title: 'AI receptionist',
-    body: 'Calls to your AB Sales number are answered by an AI receptionist. Each caller is matched against your lead lists and CRM, and every call is logged so you can see who called and how it went.',
+    body: `Calls to your ${SITE.product} number are answered by an AI receptionist. Each caller is matched against your lead lists and CRM, and every call is logged so you can see who called and how it went.`,
   },
   {
     icon: Inbox,
