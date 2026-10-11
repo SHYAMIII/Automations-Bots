@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import HeroPreview from '../components/HeroPreview'
 import { PhoneOut, PhoneIn, Mail, Inbox, Check, Arrow, Plus } from '../components/Icons'
-import { SITE, APP_URL, CREDIT_PACKS, CREDIT_COSTS } from '../lib/site'
+import { SITE } from '../lib/site'
 
 const capabilities = [
   {
@@ -64,11 +64,9 @@ const faqs = [
   },
   {
     q: 'How do I pay?',
-    a: 'Plans and credit packs are paid through Stripe or Razorpay. Prices are in US dollars.',
+    a: `Plans are paid through Stripe or Razorpay. Email ${SITE.email} for current plans and prices.`,
   },
 ]
-
-const fmt = (n) => n.toLocaleString('en-US')
 
 function SectionHead({ eyebrow, title, children }) {
   return (
@@ -85,8 +83,8 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className='border-b border-line'>
-        <div className='mx-auto grid max-w-page items-start gap-14 px-4 py-16 sm:px-6 md:py-20 lg:grid-cols-[1.05fr_1fr]'>
-          <div className='lg:pt-16'>
+        <div className='mx-auto grid max-w-page items-start gap-14 px-4 py-12 sm:px-6 md:py-16 lg:grid-cols-[1.05fr_1fr]'>
+          <div>
             <p className='eyebrow mb-5'>{SITE.product} by {SITE.company}</p>
             <h1 className='text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.5rem]'>
               Your lead list, called and emailed by AI agents.
@@ -174,44 +172,17 @@ export default function Home() {
 
       {/* Pricing */}
       <section id='pricing' className='border-b border-line bg-surface'>
-        <div className='mx-auto max-w-page px-4 py-20 sm:px-6 md:py-28'>
-          <SectionHead eyebrow='Pricing' title='Pay for the calls and emails you use'>
-            Calls use {CREDIT_COSTS.perCallMinute} credit per minute and emails use {CREDIT_COSTS.perEmail} credit each. Credits
-            are bought in packs, separately from your plan. Your plan sets monthly limits on calls, emails and team members.
+        <div className='mx-auto grid max-w-page items-end gap-10 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-[1.4fr_1fr]'>
+          <SectionHead eyebrow='Pricing' title='Plans are set by your call and email volume'>
+            What you pay depends on how many minutes your agents spend on calls each month, how many emails you send, and how many
+            people on your team use {SITE.product}. Email us with a rough idea of your volume and we will reply with a plan and price
+            that fit.
           </SectionHead>
-
-          <div className='mt-12 overflow-x-auto rounded-lg border border-line'>
-            <table className='w-full min-w-[34rem] text-left text-sm'>
-              <thead className='border-b border-line bg-raised text-muted'>
-                <tr>
-                  <th scope='col' className='px-5 py-3 font-medium'>Credit pack</th>
-                  <th scope='col' className='px-5 py-3 font-medium'>Price</th>
-                  <th scope='col' className='px-5 py-3 font-medium'>Credits</th>
-                  <th scope='col' className='px-5 py-3 font-medium'>Covers up to</th>
-                </tr>
-              </thead>
-              <tbody className='divide-y divide-line bg-bg'>
-                {CREDIT_PACKS.map((p) => (
-                  <tr key={p.name}>
-                    <th scope='row' className='px-5 py-4 font-medium'>{p.name}</th>
-                    <td className='px-5 py-4 font-mono'>${p.price}</td>
-                    <td className='px-5 py-4 font-mono'>{fmt(p.credits)}</td>
-                    <td className='px-5 py-4 text-muted'>
-                      {fmt(p.credits / CREDIT_COSTS.perCallMinute)} call minutes or {fmt(p.credits / CREDIT_COSTS.perEmail)} emails
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className='mt-4 text-xs text-muted'>Prices in US dollars. Plan prices are shown when you choose a plan.</p>
-
-          <div className='mt-8 flex flex-col gap-3 sm:flex-row'>
-            {APP_URL ? (
-              <a href={`${APP_URL}/pricing`} className='btn-primary'>See plans</a>
-            ) : (
-              <Link href='/contact' className='btn-primary'>Ask about plans</Link>
-            )}
+          <div className='flex flex-col gap-3 sm:flex-row lg:justify-end'>
+            <a href={`mailto:${SITE.email}?subject=${encodeURIComponent(`${SITE.product} pricing`)}`} className='btn-primary px-5 py-3'>
+              Email us about pricing
+            </a>
+            <Link href='/contact' className='btn-secondary px-5 py-3'>Book a demo</Link>
           </div>
         </div>
       </section>
