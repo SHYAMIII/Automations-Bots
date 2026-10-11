@@ -166,6 +166,7 @@ export default function Home() {
                 <li key={name} className='bg-bg px-5 py-4 text-sm'>{name}</li>
               ))}
             </ul>
+            <p className='mt-4 text-sm text-muted'>Zoho CRM and Dynamics 365: coming soon.</p>
           </div>
         </div>
       </section>
