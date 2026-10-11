@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import InboxPreview from '../components/InboxPreview'
+import HeroPreview from '../components/HeroPreview'
 import { PhoneOut, PhoneIn, Mail, Inbox, Check, Arrow, Plus } from '../components/Icons'
 import { SITE, APP_URL, CREDIT_PACKS, CREDIT_COSTS } from '../lib/site'
 
@@ -85,8 +85,8 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className='border-b border-line'>
-        <div className='mx-auto grid max-w-page items-center gap-14 px-4 py-16 sm:px-6 md:py-24 lg:grid-cols-[1.05fr_1fr]'>
-          <div>
+        <div className='mx-auto grid max-w-page items-start gap-14 px-4 py-16 sm:px-6 md:py-20 lg:grid-cols-[1.05fr_1fr]'>
+          <div className='lg:pt-16'>
             <p className='eyebrow mb-5'>{SITE.product} by {SITE.company}</p>
             <h1 className='text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.5rem]'>
               Your lead list, called and emailed by AI agents.
@@ -103,7 +103,7 @@ export default function Home() {
               <Link href='/#how-it-works' className='btn-secondary px-5 py-3'>How it works</Link>
             </div>
           </div>
-          <InboxPreview />
+          <HeroPreview />
         </div>
       </section>
 
